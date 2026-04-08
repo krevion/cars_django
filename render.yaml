@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: website
+    runtime: python
+    buildCommand: bash build.sh
+    startCommand: python -m gunicorn website.asgi:application -k uvicorn.workers.UvicornWorker
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.14.3
+      - key: DATABASE_URL
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4

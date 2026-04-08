@@ -1,0 +1,6 @@
+Django==6.0.3
+dj-database-url>=2.3,<3.0
+gunicorn>=23.0,<24.0
+psycopg[binary]>=3.2,<4.0
+uvicorn>=0.34,<1.0
+whitenoise[brotli]>=6.9,<7.0
