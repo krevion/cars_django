@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; text-align: center; }
+        h1 { color: #333; }
+        p { color: #666; }
+        .nav-links a { margin: 0 15px; text-decoration: none; color: #007bff; }
+        .nav-links a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Our Website!</h1>
+    <p>This is the main landing page.</p>
+    <div class="nav-links">
+        <a href="{% url 'car_list' %}">Manage Cars (CRUD)</a>
+    </div>
+</body>
+</html>

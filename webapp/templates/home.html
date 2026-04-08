@@ -1,0 +1,34 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home - CarWorld{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <h2>Welcome to CarWorld</h2>
+        <p>Discover the best cars in the world. From luxury sedans to powerful sports cars, we have it all.</p>
+        <a href="{% url 'cars' %}" class="btn">Explore Cars</a>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h3>Why Choose Us?</h3>
+        <div class="feature-grid">
+            <div class="feature">
+                <h4>Quality</h4>
+                <p>We offer only the highest quality vehicles.</p>
+            </div>
+            <div class="feature">
+                <h4>Variety</h4>
+                <p>Wide range of cars from various brands.</p>
+            </div>
+            <div class="feature">
+                <h4>Service</h4>
+                <p>Excellent customer service and support.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ car.name }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .car-detail { border: 1px solid #ccc; padding: 20px; border-radius: 5px; max-width: 600px; margin: 0 auto; }
+        .car-detail img { max-width: 100%; height: auto; margin-bottom: 15px; }
+        .actions a { margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <div class="car-detail">
+        <h1>{{ car.name }}</h1>
+        {% if car.image %}<img src="{{ car.image }}" alt="{{ car.name }}">{% endif %}
+        <p><strong>Description:</strong> {{ car.description }}</p>
+        <div class="actions">
+            <a href="{% url 'car_update' car.pk %}">Edit</a>
+            <a href="{% url 'car_delete' car.pk %}">Delete</a>
+            <a href="{% url 'car_list' %}">Back to list</a>
+        </div>
+    </div>
+</body>
+</html>
